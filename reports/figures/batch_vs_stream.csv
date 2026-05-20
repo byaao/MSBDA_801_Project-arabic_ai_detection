@@ -1,0 +1,3 @@
+Pipeline,Latency,Throughput,Use case,Fault tol.
+Batch (Spark MLlib),0.3s (full set),18098 rows/s,Offline bulk classification,Parquet checkpoint
+Stream (Structured Streaming),~5s (micro-batch),6 rows/s,Real-time detection,Streaming checkpoint + WAL
