@@ -104,27 +104,11 @@ jupyter notebook notebooks/
 
 ---
 
-## Key Design Decisions
-
-- **File-based stream source** instead of Kafka: Free Colab cannot run a persistent Kafka
-  broker. Spark's `readStream.format("json")` on a watched directory is architecturally
-  equivalent (same micro-batch semantics, same fault tolerance via checkpoint).
-
-- **Centralised `CAMELTOOLS_DATA`** in `utils.py`: The env var is set once at import time
-  via the `CAMEL_CACHE` constant. No notebook needs to set it manually.
-
-- **`add_src_to_spark(spark)`** helper: Packages `src/` as a zip and registers it with
-  Spark workers in one call — replaces copy-pasted `shutil.make_archive` blocks.
-
-- **`FORCE_REBUILD_*` flags default to `False`**: Expensive preprocessing and feature
-  extraction run once and are checkpointed to GDrive. Set `True` only after changing
-  the relevant source module.
-
----
-
 ## Team
 
 Amani Fahad Aloufi       | 4725097
+
 Asmaa Raja Allah Alharbi | 4725073
+
 Ohud Sulaiman Alraddadi  | 4725435
 
