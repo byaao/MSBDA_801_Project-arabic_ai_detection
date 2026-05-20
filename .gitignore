@@ -1,0 +1,59 @@
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ── Data (large files — store on GDrive, not in git) ──────────────────────
+data/raw/hf_cache/
+data/raw/*.parquet
+data/processed/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ── Models (large binary files) ────────────────────────────────────────────
+models/*/
+!models/.gitkeep
+
+# ── Stream I/O ─────────────────────────────────────────────────────────────
+stream/input/
+stream/output/
+stream/checkpoint/
+
+# ── Temporary Spark files ──────────────────────────────────────────────────
+src_package.zip
+derby.log
+metastore_db/
+spark-warehouse/
+
+# ── CAMeL Tools and HuggingFace caches ────────────────────────────────────
+.camel_cache/
+.hf_cache/
+
+# ── Jupyter checkpoints ────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Reports / generated figures ────────────────────────────────────────────
+reports/figures/*.png
+reports/figures/*.csv
+reports/presentations/*.pdf
+reports/presentations/*.pptx
+!reports/figures/.gitkeep
+
+# ── Environment ────────────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+
+# ── OS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

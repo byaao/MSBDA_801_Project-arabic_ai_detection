@@ -1,0 +1,44 @@
+# MSBDA-801 Arabic AI Text Detection — Python dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core distributed computing ─────────────────────────────────────────────
+pyspark==3.5.1
+
+# ── Dataset ────────────────────────────────────────────────────────────────
+datasets==2.19.0
+huggingface-hub>=0.23.0
+
+# ── Arabic NLP ─────────────────────────────────────────────────────────────
+camel-tools>=1.5.2
+pyarabic>=0.6.15
+arabic-reshaper>=3.0.0
+python-bidi>=0.4.2
+
+# ── Deep learning ──────────────────────────────────────────────────────────
+torch>=2.0.0
+transformers>=4.40.0
+sentencepiece>=0.2.0
+sentence-transformers>=2.7.0
+
+# ── Data / numerics ────────────────────────────────────────────────────────
+pandas>=2.2.0
+numpy>=1.26.0
+scipy>=1.13.0
+scikit-learn>=1.4.0
+pyarrow>=16.0.0
+
+# ── Visualisation ──────────────────────────────────────────────────────────
+matplotlib>=3.8.0
+seaborn>=0.13.0
+wordcloud>=1.9.3
+plotly>=5.22.0
+
+# ── Streaming (simulation) ─────────────────────────────────────────────────
+kafka-python>=2.0.2
+
+# ── NLP utilities ──────────────────────────────────────────────────────────
+nltk>=3.8.1
+
+# ── Notebook / Colab helpers ────────────────────────────────────────────────
+ipykernel>=6.29.0
+ipywidgets>=8.1.0
